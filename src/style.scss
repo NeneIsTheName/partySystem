@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.drinks{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: #c0c0c0;
+
+    &__search{
+        margin-bottom: 1rem;
+    }
+
+    &__input{
+        width: 100%;
+        padding: 0.5rem 0.7rem;
+        border-radius: 1rem;
+        border: solid #000000 1px;
+    }
+
+    &__scroll{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid #000000 1px;
+        padding-bottom: 0.3rem;
+    }
+
+    &__name{
+        display: flex;
+        column-gap: 0.2rem;
+    }
+
+    &__changeName{
+        padding: 0 0.5rem;
+        border: solid #000000 1px;
+    }
+
+    &__edit{
+        color: #005b9c;
+    }
+
+    &__trash{
+        color: #b40000;
+    }
+
+    &__button{
+        padding: 0.2rem 0.5rem;
+    }
+
+    &__count{
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    &__add{
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+}

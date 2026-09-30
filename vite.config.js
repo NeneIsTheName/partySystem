@@ -9,7 +9,11 @@ const crossOriginIsolation = {
 }
 
 export default defineConfig({
-  plugins: [vue(), vueDevTools()],
+  base: '/partySystem/',
+  plugins: [
+    vue(),
+    command === 'serve' && vueDevTools()
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

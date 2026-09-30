@@ -8,12 +8,12 @@ const crossOriginIsolation = {
   'Cross-Origin-Embedder-Policy': 'require-corp',
 }
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   base: '/partySystem/',
   plugins: [
     vue(),
     command === 'serve' && vueDevTools()
-  ],
+  ].filter(Boolean),
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -28,4 +28,4 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['@sqlite.org/sqlite-wasm']
   }
-})
+}))
